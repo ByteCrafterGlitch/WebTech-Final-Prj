@@ -16,3 +16,4 @@ for North Metropolitan TAFE Web Technologies final project
 | gray-800     | 31, 41, 55    | #1f2937 |
 | gray-900     | 17, 24, 39    | #111827 |
 | gray-950     | 3, 7, 18      | #030712 |
+| Limed Spruce | 55, 81, 71    | #375147 |
