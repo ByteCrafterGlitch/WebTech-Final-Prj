@@ -676,6 +676,10 @@ video {
   margin-top: 2rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .block {
   display: block;
 }
@@ -762,6 +766,10 @@ video {
 
 .h-\[30rem\] {
   height: 30rem;
+}
+
+.h-2\/3 {
+  height: 66.666667%;
 }
 
 .min-h-screen {
@@ -856,6 +864,10 @@ video {
   margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.justify-self-center {
+  justify-self: center;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -932,6 +944,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .text-3xl {
@@ -1116,6 +1132,10 @@ video {
 
   .md\:text-left {
     text-align: left;
+  }
+
+  .md\:text-center {
+    text-align: center;
   }
 
   .md\:text-2xl {
