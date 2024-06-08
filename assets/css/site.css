@@ -684,6 +684,10 @@ video {
   margin-bottom: 1.5rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1219,6 +1223,14 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.peer:not(:-moz-placeholder-shown):not(:focus):invalid ~ .peer-\[\&\:not\(\:-moz-placeholder-shown\)\:not\(\:focus\)\:invalid\]\:block {
+  display: block;
+}
+
+.peer:not(:placeholder-shown):not(:focus):invalid ~ .peer-\[\&\:not\(\:placeholder-shown\)\:not\(\:focus\)\:invalid\]\:block {
+  display: block;
 }
 
 @media (min-width: 375px) {
