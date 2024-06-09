@@ -992,6 +992,16 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.before\:content-\[\'Hello_World\'\]::before {
+  --tw-content: 'Hello World';
+  content: var(--tw-content);
+}
+
+.before\:content-\[\'Aiden_Jones\'\]::before {
+  --tw-content: 'Aiden Jones';
+  content: var(--tw-content);
+}
+
 .hover\:-translate-y-2:hover {
   --tw-translate-y: -0.5rem;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1010,6 +1020,10 @@ video {
 
 .hover\:rounded-lg:hover {
   border-radius: 0.5rem;
+}
+
+.hover\:rounded:hover {
+  border-radius: 0.25rem;
 }
 
 .hover\:bg-gray-600:hover {
@@ -1042,6 +1056,21 @@ video {
 .hover\:text-gray-300:hover {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
+}
+
+.hover\:content-\[\'Home\'\]:hover {
+  --tw-content: 'Home';
+  content: var(--tw-content);
+}
+
+.hover\:before\:content-\[\'Home\'\]:hover::before {
+  --tw-content: 'Home';
+  content: var(--tw-content);
+}
+
+.hover\:before\:content-\[\'Home_Page\'\]:hover::before {
+  --tw-content: 'Home Page';
+  content: var(--tw-content);
 }
 
 @media (min-width: 375px) {
