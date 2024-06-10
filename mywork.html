@@ -13,11 +13,26 @@
 <body class="bg-gray-900 flex flex-col min-h-screen">
 
 <header class="bg-gray-700 sticky top-0 shadow-md z-20">
-    <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+    <nav id="nav" class="container mx-auto px-4 py-6 flex justify-between items-center">
         <a href="index.html" class="flex items-center gap-5">
-            <p class="font-bold text-[0.875rem]/[1rem] sm:text-lg lg:text-xl text-gray-300 hover:text-gray-100">Aiden Jones</p>
+            <p id="myName" class="font-bold text-[0.875rem]/[1rem] sm:text-lg lg:text-xl text-gray-300 hover:text-gray-100">Aiden Jones</p>
         </a>
-        <ul class="flex space-x-4 sm:space-x-8">
+        <div id="mobileDiv" class="w-full justify-between items-center hidden invisible">
+            <ul id="menu" class="hidden flex-col gap-5 md:gap-7 text-lg md:text-2xl text-gray-300">
+                <li><a href="index.html" class="block">Home</a></li>
+                <li><a href="about.html" class="block">About</a></li>
+                <li><a href="resume.html" class="block">Resume</a></li>
+                <li><a href="projects.html" class="block">My Work</a></li>
+                <li><a href="#" class="block">Sample Project</a></li>
+                <li><a href="contact.html" class="block">Contact</a></li>
+            </ul>
+        </div>
+        <button id="hamburger" class="block lg:hidden lg:invisible focus:outline-none">
+            <svg class="w-6 h-6 text-gray-300 hover:text-gray-100" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+        <ul class="hidden invisible lg:visible lg:flex space-x-4 lg:space-x-8">
             <li><a href="about.html" class="block text-[0.70rem]/[0.80rem] sm:text-sm lg:text-base text-gray-400 hover:text-gray-300">About</a></li>
             <li><a href="resume.html" class="block text-[0.70rem]/[0.80rem] sm:text-sm lg:text-base text-gray-400 hover:text-gray-300">Resume</a></li>
             <li><a href="projects.html" class="block text-[0.70rem]/[0.80rem] sm:text-sm lg:text-base text-gray-400 hover:text-gray-300">My Work</a></li>
@@ -33,9 +48,9 @@
     </div>
 </div>
 <footer class="bg-gray-950 py-6 mt-auto">
-    <div class="container mx-auto my-5 flex flex-col md:flex-row justify-between items-center">
-        <div class="mb-4 ml-5 xl:ml-0 text-center md:mb-0 md:text-left">
-            <div class="flex items-center gap-4 justify-center md:justify-start mb-3">
+    <div class="container mx-auto my-5 flex flex-col lg:flex-row justify-between items-center">
+        <div class="lg:mb-4 lg:ml-5 xl:ml-0 text-center lg:text-left">
+            <div class="flex items-center gap-4 justify-center lg:justify-start mb-3">
                 <a href="https://github.com/Alby084" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 fill-gray-400 hover:fill-gray-300" viewBox="0 0 24 24">
                     <path d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                 </svg></a>
@@ -48,16 +63,16 @@
             </div>
             <p class="text-sm text-gray-300 leading-8">&copy; 2024 Aiden Jones. All rights reserved.</p>
         </div>
-        <div class="flex text-sm mm:text-base space-x-2 ml-4 mr-4 mm:mr-8 md:ml-4 md:mr-4 md:space-x-3 lg:space-x-8 lg:mr-6 xl:mr-0 xl:ml-0">
+        <div class="text-sm hidden invisible space-x-2 ml-4 mr-4 lg:flex lg:visible lg:space-x-8 lg:mr-6 xl:mr-0 xl:ml-0">
             <a href="index.html" class="text-gray-400 hover:text-gray-300">Home</a>
             <a href="about.html" class="text-gray-400 hover:text-gray-300">About</a>
-            <a href="#" class="text-gray-400 hover:text-gray-300">Resume</a>
+            <a href="resume.html" class="text-gray-400 hover:text-gray-300">Resume</a>
             <a href="projects.html" class="text-gray-400 hover:text-gray-300">My Work</a>
-            <a href="mywork.html" class="text-gray-400 hover:text-gray-300">Sample Project</a>
+            <a href="#" class="text-gray-400 hover:text-gray-300">Sample Project</a>
             <a href="contact.html" class="text-gray-400 hover:text-gray-300">Contact</a>
         </div>
     </div>
 </footer>
-
+<script src="assets/js/hamburger-menu.js"></script>
 </body>
 </html>
