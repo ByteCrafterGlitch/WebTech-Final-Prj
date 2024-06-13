@@ -45,7 +45,7 @@
 <div class="flex items-center justify-center h-full relative z-10">
     <div class="bg-gray-800 px-20 py-20 w-full lg:w-3/4 h-full">
         <h1 class="text-gray-300 text-4xl md:text-6xl font-bold mb-3 text-center">Sample Project</h1>
-        <ul class="items-center mt-8 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-lg sm:flex">
+        <ul class="items-center mt-8 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-md sm:flex">
             <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
                 <div class="flex items-center ps-3">
                     <input checked id="password-gen" type="checkbox" value="is-password-gen" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
@@ -65,17 +65,20 @@
                 </div>
             </li>
         </ul>
-        <input id="img-upload" class="block mt-8 w-full text-sm text-gray-400 border border-gray-600 rounded-lg cursor-pointer bg-gray-700 focus:outline-none placeholder-gray-400" style="visibility: hidden; display: none;" aria-describedby="file_input_help" type="file" accept="image/png, image/jpeg">
+        <div id="img-display-div" class="mt-8 flex justify-center p-2 bg-gray-700 rounded-md" style="visibility: hidden; display: none;">
+        <img id="display-img" src="#"  alt="your uploaded image" class="xl:max-w-[50rem] xl:max-h-[30rem] text-gray-400 rounded-md" style="visibility: hidden; display: none;"/>
+        </div>
+        <input id="img-upload" class="block mt-8 w-full text-sm text-gray-400 border border-gray-600 rounded-md cursor-pointer bg-gray-700 focus:outline-none placeholder-gray-400" style="visibility: hidden; display: none;" aria-describedby="file_input_help" type="file" accept="image/png, image/jpeg">
         <p id="img-upload-help" class="mt-1 text-sm text-gray-400 dark:text-gray-300" style="visibility: hidden; display: none;">PNG or JPG.</p>
 
         <div id="slider-div" class="mt-8 relative mb-6">
             <label for="password-length-slider" class="sr-only">Password length</label>
-            <input id="password-length-slider" type="range" value="5" min="5" max="50" class="w-full h-2 rounded-lg appearance-none cursor-pointer bg-gray-700">
+            <input id="password-length-slider" type="range" value="5" min="5" max="50" class="w-full h-2 rounded-md appearance-none cursor-pointer bg-gray-700">
             <span class="text-sm text-gray-400 absolute start-0 -bottom-6">Min 5</span>
             <span id="current-slider-value" class="text-sm md:text-base text-gray-400 absolute start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6"></span>
             <span class="text-sm text-gray-400 absolute end-0 -bottom-6">Max 50</span>
         </div>
-        <ul id="passExtraParamsUl" class="items-center mt-10 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-lg sm:flex">
+        <ul id="passExtraParamsUl" class="items-center mt-10 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-md sm:flex">
             <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
                 <div class="flex items-center ps-3">
                     <input id="exclude-numbers-checkbox" type="checkbox" value="is-exclude-numbers" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
@@ -90,7 +93,7 @@
             </li>
         </ul>
         <p id="output-header" class="mt-8 text-gray-300 text-base md:text-lg font-bold text-center">Password</p>
-        <div class="mt-2 p-4 text-center bg-gray-700 shadow-md rounded-lg overflow-auto">
+        <div class="mt-2 p-4 text-center bg-gray-700 shadow-md rounded-md overflow-auto">
             <p id="api-output" class="text-gray-300 text-base font-bold text-center md:text-lg"></p>
         </div>
         <div class="flex justify-center">

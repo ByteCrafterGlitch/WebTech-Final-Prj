@@ -12,6 +12,8 @@ const passExtraParams = document.getElementById("passExtraParamsUl");
 const outHead = document.getElementById("output-header");
 const imgUpload = document.getElementById("img-upload")
 const imgUploadHelpText = document.getElementById("img-upload-help")
+const imgUploadImageDisplay = document.getElementById("display-img")
+const imgDiv = document.getElementById("img-display-div")
 const apiKey = "EPvV0Zwbg6X2l9efIkynEAWxwKP5Tih6wGinysoz"
 
 passSlider.addEventListener("input", function() {
@@ -104,6 +106,10 @@ document.addEventListener('change', function(event) {
                 imgUpload.style.display = "none";
                 imgUploadHelpText.style.visibility = "hidden";
                 imgUploadHelpText.style.display = "none";
+                imgUploadImageDisplay.style.visibility = "hidden";
+                imgUploadImageDisplay.style.display = "none";
+                imgDiv.style.visibility = "hidden";
+                imgDiv.style.display = "none";
                 outHead.textContent = "Password"
                 break;
             case "is-dad-joke":
@@ -118,6 +124,10 @@ document.addEventListener('change', function(event) {
                 imgUpload.style.display = "none";
                 imgUploadHelpText.style.visibility = "hidden";
                 imgUploadHelpText.style.display = "none";
+                imgUploadImageDisplay.style.visibility = "hidden";
+                imgUploadImageDisplay.style.display = "none";
+                imgDiv.style.visibility = "hidden";
+                imgDiv.style.display = "none";
                 outHead.textContent = "Random Dad Joke"
                 break;
             case "is-img-to-txt":
@@ -132,10 +142,21 @@ document.addEventListener('change', function(event) {
                 imgUpload.style.display = "";
                 imgUploadHelpText.style.visibility = "";
                 imgUploadHelpText.style.display = "";
+                imgUploadImageDisplay.style.visibility = "";
+                imgUploadImageDisplay.style.display = "";
+                imgDiv.style.visibility = "";
+                imgDiv.style.display = "";
                 outHead.textContent = "Image In Text"
                 break;
 
         }
+    }
+});
+
+imgUpload.addEventListener('change', function(evt) {
+    const [file] = imgUpload.files;
+    if (file) {
+        imgUploadImageDisplay.src = URL.createObjectURL(file);
     }
 });
 
