@@ -173,10 +173,8 @@ async function generatePassword() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        console.log(result);
         return result.random_password;
     } catch (error) {
-        console.error('Error:', error);
         return error.message;
     }
 }
@@ -191,10 +189,8 @@ async function generateDadJoke() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        console.log(result);
         return result[0].joke;
     } catch (error) {
-        console.error('Error:', error);
         return error.message;
     }
 }
@@ -212,11 +208,9 @@ async function imgToTxt() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        console.log(result);
         const sentence = result.map(obj => obj.text).join(' ');
         return sentence.length === 0 ? 'No text in image' : sentence;
     } catch (error) {
-        console.error('Error:', error);
         return error.message;
     }
 }
