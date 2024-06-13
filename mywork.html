@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Project</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/site.css?v=0.2">
 </head>
 <body class="bg-gray-900 flex flex-col min-h-screen">
@@ -45,6 +46,36 @@
 <div class="flex items-center justify-center h-full relative z-10">
     <div class="bg-gray-800 px-20 py-20 w-full lg:w-3/4 h-full">
         <h1 class="text-gray-300 text-4xl md:text-6xl font-bold mb-3 text-center">Sample Project</h1>
+        <ul class="items-center mt-8 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-lg sm:flex">
+            <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
+                <div class="flex items-center ps-3">
+                    <input checked id="password-gen" type="checkbox" value="is-password-gen" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
+                    <label for="password-gen" class="w-full py-3 ms-2 text-base text-gray-300">Password Generator</label>
+                </div>
+            </li>
+            <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
+                <div class="flex items-center ps-3">
+                    <input id="dad-joke" type="checkbox" value="is-dad-joke" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
+                    <label for="dad-joke" class="w-full py-3 ms-2 text-base font-medium text-gray-300">Dad Joke</label>
+                </div>
+            </li>
+            <li class="w-full border-gray-600">
+                <div class="flex items-center ps-3">
+                    <input id="img-to-txt" type="checkbox" value="is-img-to-txt" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
+                    <label for="img-to-txt" class="w-full py-3 ms-2 text-base font-medium text-gray-300">Image To Text</label>
+                </div>
+            </li>
+        </ul>
+        <input class="hidden invisible mt-8 w-full text-sm text-gray-400 border border-gray-600 rounded-lg cursor-pointer bg-gray-700 focus:outline-none placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" accept="image/png, image/jpeg">
+        <p class="hidden invisible mt-1 text-sm text-gray-400 dark:text-gray-300" id="file_input_help">PNG or JPG.</p>
+
+        <div class="mt-8 relative mb-6">
+            <label for="password-length" class="sr-only">Password length</label>
+            <input id="password-length" type="range" value="5" min="5" max="20" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+            <span class="text-sm text-gray-400 absolute start-0 -bottom-6">Min 5</span>
+            <span id="current-slider-value" class="text-base text-gray-400 absolute start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">Length: 5</span>
+            <span class="text-sm text-gray-400 absolute end-0 -bottom-6">Max 20</span>
+        </div>
     </div>
 </div>
 <footer class="bg-gray-950 py-6 mt-auto">
@@ -74,5 +105,6 @@
     </div>
 </footer>
 <script src="assets/js/hamburger-menu.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 </html>
