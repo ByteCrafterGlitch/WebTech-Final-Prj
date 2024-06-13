@@ -50,31 +50,52 @@
             <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
                 <div class="flex items-center ps-3">
                     <input checked id="password-gen" type="checkbox" value="is-password-gen" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
-                    <label for="password-gen" class="w-full py-3 ms-2 text-base text-gray-300">Password Generator</label>
+                    <label for="password-gen" class="w-full py-3 ms-3 text-base text-gray-300">Password Generator</label>
                 </div>
             </li>
             <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
                 <div class="flex items-center ps-3">
                     <input id="dad-joke" type="checkbox" value="is-dad-joke" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
-                    <label for="dad-joke" class="w-full py-3 ms-2 text-base font-medium text-gray-300">Dad Joke</label>
+                    <label for="dad-joke" class="w-full py-3 ms-3 text-base font-medium text-gray-300">Dad Joke</label>
                 </div>
             </li>
             <li class="w-full border-gray-600">
                 <div class="flex items-center ps-3">
                     <input id="img-to-txt" type="checkbox" value="is-img-to-txt" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
-                    <label for="img-to-txt" class="w-full py-3 ms-2 text-base font-medium text-gray-300">Image To Text</label>
+                    <label for="img-to-txt" class="w-full py-3 ms-3 text-base font-medium text-gray-300">Image To Text</label>
                 </div>
             </li>
         </ul>
-        <input class="hidden invisible mt-8 w-full text-sm text-gray-400 border border-gray-600 rounded-lg cursor-pointer bg-gray-700 focus:outline-none placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" accept="image/png, image/jpeg">
-        <p class="hidden invisible mt-1 text-sm text-gray-400 dark:text-gray-300" id="file_input_help">PNG or JPG.</p>
+        <input id="img-upload" class="block mt-8 w-full text-sm text-gray-400 border border-gray-600 rounded-lg cursor-pointer bg-gray-700 focus:outline-none placeholder-gray-400" style="visibility: hidden; display: none;" aria-describedby="file_input_help" type="file" accept="image/png, image/jpeg">
+        <p id="img-upload-help" class="mt-1 text-sm text-gray-400 dark:text-gray-300" style="visibility: hidden; display: none;">PNG or JPG.</p>
 
-        <div class="mt-8 relative mb-6">
-            <label for="password-length" class="sr-only">Password length</label>
-            <input id="password-length" type="range" value="5" min="5" max="20" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+        <div id="slider-div" class="mt-8 relative mb-6">
+            <label for="password-length-slider" class="sr-only">Password length</label>
+            <input id="password-length-slider" type="range" value="5" min="5" max="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
             <span class="text-sm text-gray-400 absolute start-0 -bottom-6">Min 5</span>
-            <span id="current-slider-value" class="text-base text-gray-400 absolute start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">Length: 5</span>
-            <span class="text-sm text-gray-400 absolute end-0 -bottom-6">Max 20</span>
+            <span id="current-slider-value" class="text-sm md:text-base text-gray-400 absolute start-1/2 -translate-x-1/2 rtl:translate-x-1/2 -bottom-6">Password Length: 5</span>
+            <span class="text-sm text-gray-400 absolute end-0 -bottom-6">Max 50</span>
+        </div>
+        <ul id="passExtraParamsUl" class="items-center mt-10 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-lg sm:flex">
+            <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
+                <div class="flex items-center ps-3">
+                    <input id="exclude-numbers-checkbox" type="checkbox" value="is-exclude-numbers" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
+                    <label for="exclude-numbers-checkbox" class="w-full py-3 ms-3 text-base text-gray-300">Exclude Numbers</label>
+                </div>
+            </li>
+            <li class="w-full border-gray-600">
+                <div class="flex items-center ps-3">
+                    <input id="exclude-special-characters-checkbox" type="checkbox" value="is-exclude-special-characters" class="w-4 h-4 text-blue-600 bg-gray-600 border-gray-500 rounded focus:ring-blue-600 ring-offset-gray-700 focus:ring-offset-gray-700 focus:ring-2">
+                    <label for="exclude-special-characters-checkbox" class="w-full py-3 ms-3 text-base font-medium text-gray-300">Exclude Special Characters</label>
+                </div>
+            </li>
+        </ul>
+        <p id="output-header" class="mt-8 text-gray-300 text-base md:text-lg font-bold text-center">Password</p>
+        <div class="mt-2 p-4 text-center bg-gray-700 shadow-md rounded-lg overflow-auto">
+            <p id="api-output" class="text-gray-300 text-base font-bold text-center md:text-lg"></p>
+        </div>
+        <div class="flex justify-center">
+            <button id="api-button" type="button" class="mt-8 shadow-md text-gray-300 bg-gray-700 hover:bg-gray-600 focus:ring-4 focus:ring-blue-800 focus:outline-none font-medium rounded-lg text-base px-5 py-2.5">Submit</button>
         </div>
     </div>
 </div>
@@ -106,5 +127,6 @@
 </footer>
 <script src="assets/js/hamburger-menu.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+<script src="assets/js/mywork.js"></script>
 </body>
 </html>
