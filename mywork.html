@@ -17,7 +17,7 @@
         <a href="index.html" class="flex items-center gap-5">
             <p id="myName" class="font-bold text-[0.875rem]/[1rem] sm:text-lg lg:text-xl text-gray-300 hover:text-gray-100">Aiden Jones</p>
         </a>
-        <div id="mobileDiv" class="w-full justify-between items-center hidden invisible">
+        <nav id="mobileNav" class="w-full justify-between items-center hidden invisible">
             <ul id="menu" class="hidden flex-col gap-5 md:gap-7 text-lg md:text-2xl text-gray-300">
                 <li><a href="index.html" class="block">Home</a></li>
                 <li><a href="about.html" class="block">About</a></li>
@@ -26,7 +26,7 @@
                 <li><a href="#" class="block">Sample Project</a></li>
                 <li><a href="contact.html" class="block">Contact</a></li>
             </ul>
-        </div>
+        </nav>
         <button id="hamburger" class="block lg:hidden lg:invisible focus:outline-none">
             <svg class="w-6 h-6 text-gray-300 hover:text-gray-100" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
@@ -42,8 +42,8 @@
     </nav>
 </header>
 
-<div class="flex items-center justify-center h-full relative z-10">
-    <div class="bg-gray-800 px-20 py-20 w-full lg:w-3/4 h-full">
+<main class="flex items-center justify-center h-full relative z-10">
+    <section class="bg-gray-800 px-20 py-20 w-full lg:w-3/4 h-full">
         <h1 class="text-gray-300 text-4xl md:text-6xl font-bold mb-3 text-center">Sample Project</h1>
         <ul class="items-center mt-8 w-full text-sm font-medium text-gray-300 bg-gray-700 border border-gray-600 rounded-md sm:flex">
             <li class="w-full border-b sm:border-b-0 sm:border-r border-gray-600">
@@ -65,9 +65,9 @@
                 </div>
             </li>
         </ul>
-        <div id="img-display-div" class="mt-8 flex justify-center p-2 bg-gray-700 rounded-md" style="visibility: hidden; display: none;">
+        <figure id="img-display-div" class="mt-8 flex justify-center p-2 bg-gray-700 rounded-md" style="visibility: hidden; display: none;">
         <img id="display-img" src="#"  alt="your uploaded image" class="xl:max-w-[50rem] xl:max-h-[30rem] text-gray-400 rounded-md" style="visibility: hidden; display: none;"/>
-        </div>
+        </figure>
         <input id="img-upload" class="block mt-8 w-full text-sm text-gray-400 border border-gray-600 rounded-md cursor-pointer bg-gray-700 focus:outline-none placeholder-gray-400" style="visibility: hidden; display: none;" aria-describedby="file_input_help" type="file" accept="image/png, image/jpeg">
         <p id="img-upload-help" class="mt-1 text-sm text-gray-400 dark:text-gray-300" style="visibility: hidden; display: none;">PNG or JPG.</p>
 
@@ -92,19 +92,19 @@
                 </div>
             </li>
         </ul>
-        <p id="output-header" class="mt-8 text-gray-300 text-base md:text-lg font-bold text-center">Password</p>
+        <h2 id="output-header" class="mt-8 text-gray-300 text-base md:text-lg font-bold text-center">Password</h2>
         <div class="mt-2 p-4 text-center bg-gray-700 shadow-md rounded-md overflow-auto">
             <p id="api-output" class="text-gray-300 text-base font-bold text-center md:text-lg"></p>
         </div>
         <div class="flex justify-center">
             <button id="api-button" type="button" class="mt-8 shadow-md text-gray-300 bg-gray-700 hover:bg-gray-600 focus:ring-4 focus:ring-blue-800 focus:outline-none font-medium rounded-lg text-base px-5 py-2.5">Submit</button>
         </div>
-    </div>
-</div>
+    </section>
+</main>
 <footer class="bg-gray-950 py-6 mt-auto">
     <div class="container mx-auto my-5 flex flex-col lg:flex-row justify-between items-center">
         <div class="lg:mb-4 lg:ml-5 xl:ml-0 text-center lg:text-left">
-            <div class="flex items-center gap-4 justify-center lg:justify-start mb-3">
+            <address class="flex items-center gap-4 justify-center lg:justify-start mb-3">
                 <a href="https://github.com/Alby084" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 fill-gray-400 hover:fill-gray-300" viewBox="0 0 24 24">
                     <path d="M12 .297c-6.63 0-12 5.373-12 12c0 5.303 3.438 9.8 8.205 11.385c.6.113.82-.258.82-.577c0-.285-.01-1.04-.015-2.04c-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729c1.205.084 1.838 1.236 1.838 1.236c1.07 1.835 2.809 1.305 3.495.998c.108-.776.417-1.305.76-1.605c-2.665-.3-5.466-1.332-5.466-5.93c0-1.31.465-2.38 1.235-3.22c-.135-.303-.54-1.523.105-3.176c0 0 1.005-.322 3.3 1.23c.96-.267 1.98-.399 3-.405c1.02.006 2.04.138 3 .405c2.28-1.552 3.285-1.23 3.285-1.23c.645 1.653.24 2.873.12 3.176c.765.84 1.23 1.91 1.23 3.22c0 4.61-2.805 5.625-5.475 5.92c.42.36.81 1.096.81 2.22c0 1.606-.015 2.896-.015 3.286c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
                 </svg></a>
@@ -114,17 +114,17 @@
                 <a href="https://t.me/Alby0842" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 fill-gray-400 hover:fill-gray-300" viewBox="0 0 24 24">
                     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0zm4.962 7.224c.1-.002.321.023.465.14a.5.5 0 0 1 .171.325c.016.093.036.306.02.472c-.18 1.898-.962 6.502-1.36 8.627c-.168.9-.499 1.201-.82 1.23c-.696.065-1.225-.46-1.9-.902c-1.056-.693-1.653-1.124-2.678-1.8c-1.185-.78-.417-1.21.258-1.91c.177-.184 3.247-2.977 3.307-3.23c.007-.032.014-.15-.056-.212s-.174-.041-.249-.024q-.159.037-5.061 3.345q-.72.495-1.302.48c-.428-.008-1.252-.241-1.865-.44c-.752-.245-1.349-.374-1.297-.789q.04-.324.893-.663q5.247-2.286 6.998-3.014c3.332-1.386 4.025-1.627 4.476-1.635"/>
                 </svg></a>
-            </div>
+            </address>
             <p class="text-sm text-gray-300 leading-8">&copy; 2024 Aiden Jones. All rights reserved.</p>
         </div>
-        <div class="text-sm hidden invisible space-x-2 ml-4 mr-4 lg:flex lg:visible lg:space-x-8 lg:mr-6 xl:mr-0 xl:ml-0">
+        <nav class="text-sm hidden invisible space-x-2 ml-4 mr-4 lg:flex lg:visible lg:space-x-8 lg:mr-6 xl:mr-0 xl:ml-0">
             <a href="index.html" class="text-gray-400 hover:text-gray-300">Home</a>
             <a href="about.html" class="text-gray-400 hover:text-gray-300">About</a>
             <a href="resume.html" class="text-gray-400 hover:text-gray-300">Resume</a>
             <a href="projects.html" class="text-gray-400 hover:text-gray-300">My Work</a>
             <a href="#" class="text-gray-400 hover:text-gray-300">Sample Project</a>
             <a href="contact.html" class="text-gray-400 hover:text-gray-300">Contact</a>
-        </div>
+        </nav>
     </div>
 </footer>
 <script src="assets/js/hamburger-menu.js"></script>
